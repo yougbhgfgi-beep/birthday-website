@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂 بصمة - عيد ميلاد سعيد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-hearts">
+                <span class="floating-heart">❤️</span>
+                <span class="floating-heart">❤️</span>
+                <span class="floating-heart">❤️</span>
+                <span class="floating-heart">❤️</span>
+                <span class="floating-heart">❤️</span>
+            </div>
+            <div class="loading-text">
+                <p>استني ثانية يا بصمة…</p>
+                <p>في مفاجأة معمولة بحب مخصوص ليكي ❤️</p>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+            <div class="loading-decorations">
+                <span class="decoration">🎀</span>
+                <span class="decoration">✨</span>
+                <span class="decoration">🧸</span>
+                <span class="decoration">🐱</span>
+                <span class="decoration">🦋</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="login-background">
+                <div class="floating-element">🧸</div>
+                <div class="floating-element">🐱</div>
+                <div class="floating-element">🦋</div>
+                <div class="floating-element">⭐</div>
+                <div class="floating-element">☁️</div>
+                <div class="floating-element">💕</div>
+            </div>
+            
+            <div class="login-card">
+                <h1 class="login-title">بصمة</h1>
+                <p class="login-subtitle">كل سنة وانتي أجمل بنت في الدنيا ❤️</p>
+                
+                <div class="password-input-container">
+                    <input type="password" id="passwordInput" class="password-input" placeholder="أدخلي كلمة السر...">
+                    <span class="input-glow"></span>
+                </div>
+                
+                <button id="loginBtn" class="login-btn">ادخلي 💖</button>
+                
+                <div class="login-decorations">
+                    <span>❤️</span>
+                    <span>✨</span>
+                    <span>🎀</span>
+                    <span>✨</span>
+                    <span>❤️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="main-content" style="display: none;">
+        <!-- Envelope Section -->
+        <section id="envelopeSection" class="envelope-section">
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-front">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body"></div>
+                        <span class="envelope-sparkle">✨</span>
+                    </div>
+                </div>
+                
+                <div class="floating-hearts-envelope">
+                    <span>💕</span>
+                    <span>💕</span>
+                    <span>💕</span>
+                    <span>💕</span>
+                </div>
+            </div>
+
+            <!-- Letter Modal -->
+            <div id="letterModal" class="letter-modal" style="display: none;">
+                <div class="letter-blur"></div>
+                <div class="letter-container">
+                    <button class="letter-close" id="letterClose">&times;</button>
+                    <div class="letter-content">
+                        <p>يا بصمة الحلوة،</p>
+                        <p>كل سنة وانتي معايا وأغلى وأجمل بنت في الدنيا 💕</p>
+                        <p>في 19 سنة قضيتيها، خلقتي كل اللحظات اللي حوليك جنة وفرحة وحب</p>
+                        <p>انتي ليستي بصمة عادية، انتي بصمة قلبي وروحي وحياتي</p>
+                        <p>كل يوم معاك يكون أجمل من اللي قبله</p>
+                        <p>وهستمر أشوفك كأحلى ملاك في الدنيا 👑✨</p>
+                        <p>كل سنة وانتي أميرة قلبي وحياتي ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section -->
+        <section id="heroSection" class="hero-section">
+            <div class="hero-background">
+                <canvas id="particlesCanvas"></canvas>
+            </div>
+            
+            <div class="hero-content">
+                <div class="angel-wings">👼</div>
+                <h1 class="hero-title">بصمة</h1>
+                <p class="hero-subtitle">19 سنة من الجمال والدلع ❤️</p>
+                
+                <div class="decorative-elements">
+                    <span class="deco-item">🎀</span>
+                    <span class="deco-item">✨</span>
+                    <span class="deco-item">💕</span>
+                    <span class="deco-item">✨</span>
+                    <span class="deco-item">🎀</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Cake Section -->
+        <section id="cakeSection" class="cake-section">
+            <h2>اضغطي على الشموع 🎂</h2>
+            
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="cake-candles">
+                        <div class="candle candle-1" data-number="1">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle candle-9" data-number="9">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                    <div class="cake-body"></div>
+                </div>
+            </div>
+
+            <p class="cake-message">كل سنة وانتي أجمل بصمة في قلبي ❤️</p>
+        </section>
+
+        <!-- Romantic Words Section -->
+        <section id="wordsSection" class="words-section">
+            <h2>كلمات من القلب 💌</h2>
+            
+            <div class="words-container">
+                <div class="word-card">
+                    <p class="typing-text">أنتِ نور حياتي وأجمل هدية في الدنيا</p>
+                </div>
+                <div class="word-card">
+                    <p class="typing-text">كل يوم معاك يصير أحلى من اللي قبله</p>
+                </div>
+                <div class="word-card">
+                    <p class="typing-text">بصمتك في قلبي أغلى من أي ذهب في الدنيا</p>
+                </div>
+                <div class="word-card">
+                    <p class="typing-text">وجودك حياة وفرح وأمل لأيامي</p>
+                </div>
+                <div class="word-card">
+                    <p class="typing-text">أتمنى تبقي دايماً بنفس الجمال واللطافة</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallerySection" class="gallery-section">
+            <h2>ذكريات حلوة 📸</h2>
+            
+            <div class="gallery-container">
+                <div class="gallery-item polaroid">
+                    <div class="polaroid-image" style="background: linear-gradient(135deg, #ffb6c1, #ffc0cb);"></div>
+                    <p>لحظتك الحلوة</p>
+                </div>
+                <div class="gallery-item polaroid">
+                    <div class="polaroid-image" style="background: linear-gradient(135deg, #ffc0cb, #ffe4e1);"></div>
+                    <p>ابتسامتك</p>
+                </div>
+                <div class="gallery-item polaroid">
+                    <div class="polaroid-image" style="background: linear-gradient(135deg, #ffe4e1, #fff0f5);"></div>
+                    <p>جمالك</p>
+                </div>
+                <div class="gallery-item polaroid">
+                    <div class="polaroid-image" style="background: linear-gradient(135deg, #fff0f5, #ffc0cb);"></div>
+                    <p>روحك</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Box Section -->
+        <section id="giftSection" class="gift-section">
+            <h2>مفاجأة خاصة 🎁</h2>
+            
+            <div class="gift-box-container">
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-box-top">
+                        <div class="gift-ribbon"></div>
+                        <div class="gift-bow"></div>
+                    </div>
+                    <div class="gift-box-body"></div>
+                </div>
+                
+                <div id="giftMessage" class="gift-message" style="display: none;">
+                    <p>أنتِ الأجمل والأحلى ❤️</p>
+                    <p>وفي كل سنة تزيدي جمالاً وعطاءً</p>
+                    <p>كل سنة وانتي أجمل بصمة في حياتي 👑✨</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surprise Button Section -->
+        <section id="surpriseSection" class="surprise-section">
+            <button id="surpriseBtn" class="surprise-button">🎉 مفاجأة خاصة!</button>
+            <div id="surprisePopup" class="surprise-popup" style="display: none;">
+                <div class="surprise-content">
+                    <p>كل سنة وانتي أميرة قلبي 👑</p>
+                    <p>وأجمل هدية حصلت في الدنيا ❤️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="videoSection" class="video-section">
+            <h2>فيديو خاص 🎥</h2>
+            
+            <div class="video-container">
+                <div class="video-frame">
+                    <div class="video-placeholder">
+                        <span>▶️</span>
+                        <p>فيديو عيد ميلادك</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Button -->
+        <section id="finalSection" class="final-section">
+            <button id="finalBtn" class="final-button">🌟 النهاية السحرية 🌟</button>
+        </section>
+
+        <!-- Floating Elements -->
+        <div class="floating-decorations">
+            <span class="floating-deco">🦋</span>
+            <span class="floating-deco">🌸</span>
+            <span class="floating-deco">⭐</span>
+            <span class="floating-deco">💕</span>
+            <span class="floating-deco">🎀</span>
+        </div>
+
+        <!-- Notifications -->
+        <div id="notificationContainer" class="notification-container"></div>
+
+        <!-- Final Outro -->
+        <div id="outroSection" class="outro-section" style="display: none;">
+            <div class="outro-blur"></div>
+            <div class="outro-content">
+                <canvas id="outroParticles"></canvas>
+                <h1 class="outro-text">وهتفضلي أجمل وأغلى بصمة في قلبي طول العمر ❤️</h1>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
